@@ -15,7 +15,7 @@
             'titulo',
             'data_postagem',
             'texto',
-            '(select nome from usuario where usuario.id = post_usuario_id) as nome'
+            '(select nome from usuario where usuario.id = post.usuario_id) as nome'
 
         ],
         [
@@ -59,6 +59,16 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <?php
+                        
+                        include 'includes/rodape.php';
+
+                    ?>
+                </div>
+            </div>
         </div>
+        <script src="lib/bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
     </body>
 </html>
