@@ -67,8 +67,25 @@
                                 <textarea name="texto" id="texto" require="required" rows="5" <?php echo $entidade['texto'] ?? '' ?>></textarea>
                             </div>
                             
+                            <div class="form-group">
+                                <label for="texto">Postar em</label>
+                                <?php 
+                                    $data = (!empty($entidade['data_postagem']))?
+                                        explode(' ', $entidade['data_postagem'])[0] : '';
+                                    $hora = (!empty($entidade['data_postagem']))?
+                                        explode(' ', $entidade['data_postagem'])[1] : '';
+                                ?>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <input type="date" class="form-control" require="required" id="data_postagem" nome="data_postagem" value="<?php $data ?>">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="time" class="form-control" require="required" id="hora_postagem" nome="hora_postagem" value="<?php $hora ?>">
+                                    </div>
+                                </div>
+                            </div>
                             <div class="text-right">
-                                <button class="btn btn-success" type="submit">Acessar</button>
+                                <button class="btn btn-success" type="submit">Salvar</button>
                             </div>
                         </form>
                 </div>
