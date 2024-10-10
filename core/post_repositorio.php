@@ -1,4 +1,5 @@
 <?php
+    //// Envio dos posts
     session_start();
     require_once '../includes/valida_login.php';
     require_once '../includes/funcoes.php';
@@ -17,7 +18,7 @@
     }
 
     $id = (int)$id;
-
+    
     switch($acao){
         case 'insert':
             $dados =[

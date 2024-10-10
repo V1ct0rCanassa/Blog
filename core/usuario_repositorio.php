@@ -1,4 +1,5 @@
 <?php
+    // Envia os dados do Usuário
     session_start();
     require_once '../includes/funcoes.php';
     require_once 'conexao_mysql.php';

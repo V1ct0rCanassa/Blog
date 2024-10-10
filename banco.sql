@@ -26,5 +26,6 @@ CREATE TABLE post (
     key fk_post_usuario_idx (usuario_id),
     constraint fk_post_usuario foreign key (usuario_id) references usuario (id)
 );
-
+INSERT INTO usuario (nome, email, senha, ativo, adm)
+VALUES ('Vpn210', 'victoracanassa@email.com', '123dog', 1, 1);
 
